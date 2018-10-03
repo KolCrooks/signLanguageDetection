@@ -1,0 +1,35 @@
+{
+  "name": "signlanguagedetect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "electron-rebuild": "electron-rebuild -w opencv4nodejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KolCrooks/signLanguageDetection.git"
+  },
+  "keywords": [
+    "signlanguage",
+    "tensorflow",
+    "cnn"
+  ],
+  "author": "kol crooks and sean mchale",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/KolCrooks/signLanguageDetection/issues"
+  },
+  "homepage": "https://github.com/KolCrooks/signLanguageDetection#readme",
+  "devDependencies": {
+    "electron": "^3.0.2",
+    "electron-rebuild": "^1.8.2"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "opencv4nodejs": "^4.8.0"
+  }
+}
