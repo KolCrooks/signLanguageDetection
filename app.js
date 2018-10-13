@@ -10,11 +10,8 @@
 
 
  function main(){
-    gui.init(process.platform,)
+    gui.init(process.platform)
  }
-
-
-
 
 
 
