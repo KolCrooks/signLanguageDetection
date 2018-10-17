@@ -6,7 +6,7 @@ const cv = require('opencv4nodejs');
  */
 var setCamera = (device) => {
     try{
-        capDevice = cv.VideoCapture(device);
+        capDevice = new cv.VideoCapture(device);
         return {
             res: true,
             device: device,
@@ -27,7 +27,22 @@ var setCamera = (device) => {
  * @returns returns a Mat object of frame
  */
 var getCurrentFrame = () => {
-    return capDevice.read();
+    try{
+        let mat = capDevice.read();
+        let data = JSON.stringify(mat.getData());
+        return {
+            res: true,
+            data: data,
+            dim: [mat.rows,mat.cols],
+            error: ""
+        }
+    }catch(e){
+        return {
+            res: false,
+            data: null,
+            error: e.message
+        } 
+    }
 }
 
 

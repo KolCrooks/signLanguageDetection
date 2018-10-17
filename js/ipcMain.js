@@ -10,3 +10,8 @@ ipcMain.on('setCamera', (event, arg) => {
   event.sender.send('setCamera', JSON.stringify(answer));
 
 });
+
+ipcMain.on('getFrame', (event, arg) => {
+  event.sender.send('getFrame', JSON.stringify(camera.getCurrentFrame()));
+  
+});

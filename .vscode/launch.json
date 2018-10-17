@@ -10,6 +10,17 @@
             "name": "electron- main",
             "appDir": "/home/kol/Desktop/signLanguageDetection",
             "sourceMaps": true
-        }
+        },
+        {
+            "name": "Debug Main Process",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "windows": {
+              "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+            },
+            "args" : ["."]
+          }
     ]
 }

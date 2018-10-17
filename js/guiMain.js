@@ -7,6 +7,11 @@
 var electron = require('electron');
 var ipcMain = require('./ipcMain');
 
+if(process.execPath.indexOf('electron') > -1) {
+    // it handles shutting itself down automatically
+    require('electron-local-crash-reporter').start();
+  }
+
 let init = function(os){
     electron.app.on('ready',createWindow);
 }
