@@ -17,7 +17,6 @@ let init = async function(){
 
 	console.log("cameraChange",$("#cameraSelect").val());
 	ipcHelper.setCamera(parseInt($("#cameraSelect").val()));
-	cameraLoop();
 
 };
 
@@ -40,26 +39,7 @@ var updateDevices = async ()=> {
 		$("#cameraSelect").append("<option value="+ devices.indexOf(element) + ">" + element.label + "</option>");
 	});
 };
-var cameraLoop = () =>{
-	setInterval(async ()=>{
-		let {data, dim} = await ipcHelper.getFrame();
-		let canvas = document.getElementById("output");
-		renderImage(data, dim,canvas);
-		
-	},1000);
-};
 
-function renderImage(data, dim, canvas) {
-
-	canvas.height = dim[0];
-	canvas.width = dim[1];
-
-	var ctx = canvas.getContext("2d");
-	var palette = ctx.getImageData(0,0,dim[0],dim[1]);
-	palette.data.set(new Uint8ClampedArray(data));
-	
-	ctx.putImageData(palette,0,0);
-}
 
 $(document).ready(()=> {
 	init();

@@ -5,22 +5,7 @@
  * @Date: 2018-10-01
  */
 
- let gui = require("./js/guiMain");
+let gui = require("./js/guiMain");
 
 
-
- function main(){
-    gui.init(process.platform)
- }
-
-
-
-
-
-
-
-
-
-
-
- main();
+gui.init(process.platform);
