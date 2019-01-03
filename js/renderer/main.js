@@ -1,6 +1,7 @@
 let electron = require("electron").remote;
-let ipcHelper = require("../js/renderer/ipcHelper");
-let cv = require("opencv4nodejs");
+let cameraWorker = require("../js/renderer/cameraWorker");
+let networkHelper = require("../js/renderer/networkHelper")
+//let cv = require("opencv4nodejs");
 $ = window.$;
 
 
@@ -12,12 +13,12 @@ let init = async function(){
 	$("#cameraSelect").click(updateDevices);
 	$("#cameraSelect").change(()=>{
 		console.log("cameraChange",$("#cameraSelect").val());
-		ipcHelper.setCamera(parseInt($("#cameraSelect").val()));
+		cameraWorker.setCamera($("#cameraSelect").val());
 	});
 
 	console.log("cameraChange",$("#cameraSelect").val());
-	ipcHelper.setCamera(parseInt($("#cameraSelect").val()));
-
+	cameraWorker.setCamera($("#cameraSelect").val());
+	cameraWorker.renderImage();
 };
 
 var detectCameras = async function (){
@@ -36,7 +37,7 @@ var updateDevices = async ()=> {
 		$("#cameraSelect").find("option")
 			.remove()
 			.end();
-		$("#cameraSelect").append("<option value="+ devices.indexOf(element) + ">" + element.label + "</option>");
+		$("#cameraSelect").append("<option value="+ element.deviceId + ">" + element.label + "</option>");
 	});
 };
 
@@ -47,4 +48,4 @@ $(document).ready(()=> {
 
 });
 
-global.ipcHelper = ipcHelper;
+global.networkHelper = networkHelper;

@@ -10,7 +10,7 @@
             "request": "launch",
             "name": "electron- main",
             "appDir": "${workspaceRoot}",
-            "sourceMaps": true
+            "sourceMaps": true,
         },
         {
             "name": "Debug Main Process",

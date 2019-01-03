@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint",
-    "electron-rebuild": "electron-rebuild -w opencv4nodejs"
+    "electron-rebuild": "electron-rebuild -w wrtc"
   },
   "repository": {
     "type": "git",
@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/KolCrooks/signLanguageDetection#readme",
   "devDependencies": {
-    "electron": "^3.0.2",
+    "electron": "^4.0.0",
     "electron-local-crash-reporter": "^1.0.2",
     "electron-rebuild": "^1.8.2"
   },
   "dependencies": {
+    "domexception": "^1.0.1",
     "jquery": "^3.3.1",
-    "opencv-build": "0.0.15",
-    "opencv4nodejs": "^4.9.0"
+    "node-pre-gyp": "^0.12.0"
   }
 }

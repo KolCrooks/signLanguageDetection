@@ -1,2 +1,0 @@
-const {ipcMain} = require('electron');
-
