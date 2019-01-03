@@ -1,6 +1,6 @@
 let electron = require("electron").remote;
 let cameraWorker = require("../js/renderer/cameraWorker");
-let networkHelper = require("../js/renderer/networkHelper")
+let networkHelper = require("../js/renderer/networkRenderer")
 //let cv = require("opencv4nodejs");
 $ = window.$;
 
