@@ -3,16 +3,18 @@
         <link rel="stylesheet" href="../lib/photon/css/photon.min.css">
         <script>window.$ = window.jQuery = require('jquery');</script>
         <script src="../js/renderer/main.js"></script>
-        <script src="../lib/opencv.js" onload="()=>{Console.log('OpenCV ready')}" onerror="(e)=>{console.error(e)}" type="text/javascript"></script>
     </header>
     <body>
-        <video id="camera"></video>
         <div class="window">
             <div class="window-content">
                 <video id="video"></video>
+                <canvas id="output"></canvas>
                 <div class="form-group">
                     <select class="form-control" id="cameraSelect" style="position: absolute; top:50%; width:30%; padding: 3px"></select>
+                    <input type="number" id="min" value="0"></input>
+                    <input type="number" id="max" value="255"></input>
                 </div>
+
             </div>
           </div>
     </body>

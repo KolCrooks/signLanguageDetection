@@ -1,10 +1,10 @@
 let camera = 0;
-
+let video;
 let setCamera = (selected) => {
 	camera = selected;
 };
 
-let renderImage = () => {
+let renderImage = ()=> {return new Promise((resolve, reject) => {
 
 	navigator.mediaDevices.getUserMedia({
 		audio:false,
@@ -13,17 +13,22 @@ let renderImage = () => {
 	  	}
 	})
 	.then(function(stream) {
-		let video = $("#video")[0];
-		console.log(stream)
+		video = $("#video")[0];
+		console.log(stream);
 		video.srcObject = stream;
 		video.onloadedmetadata = function(e) {
 			console.log(e)
 		  video.play();
+		  resolve(video);
 		};
-	}).catch(e=>{console.error(e)})
+		
+	}).catch(e=>{reject(e)})
+})};
+let getCamera = () => { 
+	return video;
 }
-
 module.exports = {
 	setCamera,
-	renderImage
+	renderImage,
+	getCamera
 };
