@@ -1,4 +1,9 @@
 // const {ipcMain} = require('electron');
-//let test = require('wrtc');
-// RTCPeerConnection()
 
+debugger
+console.log('test')
+try{
+  //let wrtc = require('wrtc');
+}catch(e){console.error(e)}
+// RTCPeerConnection()
+debugger
