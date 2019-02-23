@@ -18,8 +18,8 @@ let renderImage = ()=> {return new Promise((resolve, reject) => {
 		video.srcObject = stream;
 		video.onloadedmetadata = function(e) {
 			console.log(e)
-		  video.play();
-		  resolve(video);
+		  video.play().then(()=>{resolve(video);});
+		  
 		};
 		
 	}).catch(e=>{reject(e)})
@@ -27,8 +27,17 @@ let renderImage = ()=> {return new Promise((resolve, reject) => {
 let getCamera = () => { 
 	return video;
 }
+var detectCameras = async function (){
+	let devices = await navigator.mediaDevices.enumerateDevices();
+	let cams = [];
+	devices.forEach((v)=>{
+		if(v.kind == "videoinput") cams.push(v);
+	});
+	return cams;
+};
 module.exports = {
 	setCamera,
 	renderImage,
-	getCamera
+	getCamera,
+	detectCameras
 };
