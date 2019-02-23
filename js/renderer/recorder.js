@@ -43,7 +43,7 @@ let stop = ()=>{
     recorder.stop();
     console.log("recoding Stopped")
     //dialog.showSaveDialog(null, options,save);
-    save(new Date().getTime() + ".webm");
+    save("./clips/" + new Date().getTime() + ".webm");
     $('#record').html("record")
     recording = false;
 }
