@@ -1,74 +1,117 @@
 from keras.preprocessing.image import ImageDataGenerator
-import keras.models
+from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.layers.convolutional import Convolution3D, MaxPooling3D
 
 from keras.optimizers import SGD, RMSprop
 from keras.utils import np_utils, generic_utils
 
-import tensorflow as tf
+
 import os
-import matplotlib
-import matplotlib.pyplot as plt
+
 import numpy as np
-import ffmpeg
+import cv2
 
-from sklearn.model_selection  import train_test_split
+from sklearn.model_selection import train_test_split
 
-
-# image specification
-img_rows,img_cols,img_depth=480,640,42
+from keras import backend as K
 
 
-# Training data
+def readdataset(videos,dir,retList):
 
-X_tr=[]           # variable to store entire dataset
+    for vid in videos:
+        vid = dir + vid
+        frames = []
+        cap = cv2.VideoCapture(vid)
+        while True:
+            ret, frame = cap.read()
+            if frame is None:
+                break;
+            frame = cv2.resize(frame, (img_rows, img_cols), interpolation=cv2.INTER_AREA)
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            frames.append(gray)
+        print("frame count: " + str(len(frames)))
+        cnt = 0
+        if len(frames) > img_depth:
+            while len(frames) > img_depth:
+                del frames[cnt]
+                cnt += 1
+                cnt %= len(frames)
+        else:
+            while len(frames) < img_depth:
+                print(cnt)
+                print(len(frames))
+                frames.insert(cnt,frames[cnt])
+                cnt += 2
+                cnt %= len(frames)
 
-#Reading boxing action class
-path = 'C:\\Users\\kolcr\\PycharmProjects\\3DCnn\\clips\\'
-listing = os.listdir(path)
 
-for vid in listing:
-    vid = path+vid
-    images = []
-    frames = []
-    print(vid)
-    probe = ffmpeg.probe(vid)
-    video_stream = next((stream for stream in probe['streams'] if stream['codec_type'] == 'video'), None)
-    width = int(video_stream['width'])
-    height = int(video_stream['height'])
+    cap.release()
+    cv2.destroyAllWindows()
+    input = np.array(frames)
+    print(input.shape)
+    ipt = np.rollaxis(np.rollaxis(input, 2, 0), 2, 0)  # to make data in image row, image column, image depth
+    print(ipt.shape)
+    retList.append(ipt)
 
-    out, err = (
-        ffmpeg
-            .input(vid)
-            .output('pipe:', format='rawvideo', pix_fmt='rgb24')
-            .run(capture_stdout=True)
-    )
-    video = (
-        np
-            .frombuffer(out, np.uint8)
-            .reshape([-1, height, width])
-    )
 
-    ipt=np.rollaxis(np.rollaxis(video,2,0),2,0)
+K.set_image_dim_ordering('th')
 
-    X_tr.append(ipt)
+
+img_rows, img_cols, img_depth = 56, 56, 60
+
+# print(frameCount)
+# Test Video
+X_test = []
+vid = './Actions/'
+readdataset(['testAVI.avi'], vid, X_test);
+
+X_test_array = np.array(X_test)
+num_samples2 = len(X_test_array)
+test_set = np.zeros((num_samples2, 1, img_rows, img_cols, img_depth))
+
+
+# Where all data sets will be stored
+X_tr = []
+
+# handMoving Data set
+pathHM = './Actions/handMoving/'
+listingHM = os.listdir(pathHM)
+readdataset(listingHM, pathHM, X_tr);
+
+# hands collide data set
+pathHC = './Actions/handsCollide/'
+listingHC = os.listdir(pathHC)
+readdataset(listingHC, pathHC, X_tr);
+
+# HandsUpAway data set
+pathHUA = './Actions/handsUpAway/'
+listingHUA = os.listdir(pathHUA)
+readdataset(listingHUA, pathHUA, X_tr);
+
+# handsUpDown data set
+pathHUP = './Actions/handsUpDown/'
+listingHUP = os.listdir(pathHUP)
+readdataset(listingHUP, pathHUP, X_tr);
+
+# open close data set
+pathOC = './Actions/openClose/'
+listingOC = os.listdir(pathOC)
+readdataset(listingOC, pathOC, X_tr);
 
 
 X_tr_array = np.array(X_tr)  # convert the frames read into array
 
 num_samples = len(X_tr_array)
-print("Num Samples: " + str(num_samples))
+print(num_samples)
 
 # Assign Label to each class
-
 label = np.ones((num_samples,), dtype=int)
-label[0:100] = 0
-label[100:199] = 1
-label[199:299] = 2
-label[299:399] = 3
-label[399:499] = 4
-label[499:] = 5
+label[0:len(listingHM)] = 0 #Hand Moving
+label[len(listingHM):len(listingHM)+len(listingHC)] = 1 #Hands colliding
+label[len(listingHM)+len(listingHC):len(listingHM)+len(listingHC)+len(listingHUA)] = 2 #Hands up away
+label[len(listingHM)+len(listingHC)+len(listingHUA):len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP)] = 3 #Hands up Down
+label[len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP):] = 4  #Open Close
 
 train_data = [X_tr_array, label]
 
@@ -76,22 +119,21 @@ train_data = [X_tr_array, label]
 print('X_Train shape:', X_train.shape)
 
 train_set = np.zeros((num_samples, 1, img_rows, img_cols, img_depth))
-
 for h in range(num_samples):
     train_set[h][0][:][:][:] = X_train[h, :, :, :]
 
-patch_size = 42 # img_depth or number of frames used for each video
+patch_size = 90  # img_depth or number of frames used for each video
 
 print(train_set.shape, 'train samples')
 
 # CNN Training parameters
-
 batch_size = 2
-nb_classes = 6
-nb_epoch = 50
+nb_classes = 5
+nb_epoch = 100
 
 # convert class vectors to binary class matrices
 Y_train = np_utils.to_categorical(y_train, nb_classes)
+
 
 # number of convolutional filters to use at each layer
 nb_filters = [32, 32]
@@ -111,74 +153,43 @@ train_set -= np.mean(train_set)
 train_set /= np.max(train_set)
 
 # Define model
+model = Sequential()
 
-model = keras.models.Sequential()
-#(nb_filters[0], nb_depth=nb_conv[0], nb_row=nb_conv[0], nb_col=nb_conv[0],
-#                       , activation='relu'))
+model.add(Convolution3D(nb_filters[0], kernel_dim1=nb_conv[0], kernel_dim2=nb_conv[0], kernel_dim3=nb_conv[0],
+                        input_shape=(1, img_rows, img_cols, img_depth), activation='relu'))
 
-model.add(keras.layers.Conv3D(nb_filters[0], (3, 3, 3), input_shape=(img_rows, img_cols, patch_size, 1)))
+model.add(MaxPooling3D(pool_size=(nb_pool[0], nb_pool[0], nb_pool[0])))
 
-model.add(keras.layers.MaxPooling3D(pool_size=(nb_pool[0], nb_pool[0], nb_pool[0])))
+model.add(Dropout(0.5))
 
-model.add(keras.layers.Dropout(0.5))
+model.add(Flatten())
 
-model.add(keras.layers.Flatten())
+model.add(Dense(128, activation='relu'))
 
-model.add(keras.layers.Dense(128, kernel_initializer=keras.initializers.normal, activation='relu'))
+model.add(Dropout(0.5))
 
-model.add(keras.layers.Dropout(0.5))
-
-model.add(keras.layers.Dense(nb_classes, kernel_initializer=keras.initializers.normal))
+model.add(Dense(nb_classes, activation='relu'))
 
 model.add(Activation('softmax'))
-
 model.compile(loss='categorical_crossentropy', optimizer='RMSprop')
 
 # Split the data
 
-X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=4)
+X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=2)
 
 # Train the model
+opt = SGD(lr=0.01)
 
+model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['acc'])
 hist = model.fit(X_train_new, y_train_new, validation_data=(X_val_new, y_val_new),
-                 batch_size=batch_size, nb_epoch=nb_epoch, show_accuracy=True, shuffle=True)
+                 batch_size=batch_size, epochs=nb_epoch, shuffle=True)
 
-# hist = model.fit(train_set, Y_train, batch_size=batch_size,
-#         nb_epoch=nb_epoch,validation_split=0.2, show_accuracy=True,
-#           shuffle=True)
+# Test Mode
+score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size)
+print(score)
 
+y_prob = model.predict(test_set, batch_size=2)
+y_classes = y_prob.argmax(axis=-1)
 
-# Evaluate the model
-score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size, show_accuracy=True)
-print('Test score:', score[0])
-print('Test accuracy:', score[1])
+print(y_classes)
 
-# Plot the results
-train_loss = hist.history['loss']
-val_loss = hist.history['val_loss']
-train_acc = hist.history['acc']
-val_acc = hist.history['val_acc']
-xc = range(100)
-
-plt.figure(1, figsize=(7, 5))
-plt.plot(xc, train_loss)
-plt.plot(xc, val_loss)
-plt.xlabel('num of Epochs')
-plt.ylabel('loss')
-plt.title('train_loss vs val_loss')
-plt.grid(True)
-plt.legend(['train', 'val'])
-print
-plt.style.available  # use bmh, classic,ggplot for big pictures
-plt.style.use(['classic'])
-
-plt.figure(2, figsize=(7, 5))
-plt.plot(xc, train_acc)
-plt.plot(xc, val_acc)
-plt.xlabel('num of Epochs')
-plt.ylabel('accuracy')
-plt.title('train_acc vs val_acc')
-plt.grid(True)
-plt.legend(['train', 'val'], loc=4)
-# print plt.style.available # use bmh, classic,ggplot for big pictures
-plt.style.use(['classic'])
