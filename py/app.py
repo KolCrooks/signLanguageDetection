@@ -27,7 +27,6 @@ def readdataset(videos,dir,retList):
         vid = dir + vid
         frames = []
         cap = cv2.VideoCapture(vid)
-        length = int(cap.get(7)) # get number of frames
         while True:
             ret, frame = cap.read()
             if frame is None:
@@ -112,11 +111,11 @@ print(num_samples)
 
 # Assign Label to each class
 label = np.ones((num_samples,), dtype=int)
-label[0:2] = 0 #Hand Moving
-label[2:4] = 1 #Hands colliding
-label[4:6] = 2 #Hands up away
-label[6:8] = 3 #Hands up Down
-label[8:] = 4  #Open Close
+label[0:len(listingHM)] = 0 #Hand Moving
+label[len(listingHM):len(listingHM)+len(listingHC)] = 1 #Hands colliding
+label[len(listingHM)+len(listingHC):len(listingHM)+len(listingHC)+len(listingHUA)] = 2 #Hands up away
+label[len(listingHM)+len(listingHC)+len(listingHUA):len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP)] = 3 #Hands up Down
+label[len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP):] = 4  #Open Close
 
 train_data = [X_tr_array, label]
 
