@@ -6,17 +6,13 @@ from keras.layers.convolutional import Convolution3D, MaxPooling3D
 from keras.optimizers import SGD, RMSprop
 from keras.utils import np_utils, generic_utils
 
-# import theano
+
 import os
 
 import numpy as np
 import cv2
-import glob
-import matplotlib
-import matplotlib.pyplot as plt
+
 from sklearn.model_selection import train_test_split
-from sklearn import model_selection
-from sklearn import preprocessing
 
 from keras import backend as K
 
