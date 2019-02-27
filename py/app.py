@@ -109,8 +109,8 @@ print(num_samples)
 label = np.ones((num_samples,), dtype=int)
 label[0:len(listingHM)] = 0 #Hand Moving
 label[len(listingHM):len(listingHM)+len(listingHC)] = 1 #Hands colliding
-label[len(listingHM)+len(listingHC):len(listingHM)+len(listingHC)+len(listingHUA)] = 2 #Hands up away
-label[len(listingHM)+len(listingHC)+len(listingHUA):len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP)] = 3 #Hands up Down
+label[len(listingHM)+len(listingHC):len(listingHM)+len(listingHC)+len(listingHUA)] = 2 # Hands up away
+label[len(listingHM)+len(listingHC)+len(listingHUA):len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP)] = 3 # Hands up Down
 label[len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP):] = 4  #Open Close
 
 train_data = [X_tr_array, label]
@@ -127,7 +127,7 @@ patch_size = 90  # img_depth or number of frames used for each video
 print(train_set.shape, 'train samples')
 
 # CNN Training parameters
-batch_size = 2
+batch_size = 100
 nb_classes = 5
 nb_epoch = 100
 
@@ -178,7 +178,7 @@ model.compile(loss='categorical_crossentropy', optimizer='RMSprop')
 X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=2)
 
 # Train the model
-opt = SGD(lr=0.01)
+opt = SGD(lr=0.001)
 
 model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['acc'])
 hist = model.fit(X_train_new, y_train_new, validation_data=(X_val_new, y_val_new),
