@@ -189,6 +189,7 @@ score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size)
 print(score)
 
 y_prob = model.predict(test_set, batch_size=2)
+
 y_classes = y_prob.argmax(axis=-1)
 
 print(y_classes)
