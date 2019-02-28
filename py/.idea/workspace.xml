@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b956b6a-70b6-4dfb-8e7e-948c9bc8cf92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/3DCnn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/3DCnn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Actions/handsCollide2.mp4" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,19 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Actions/convert/converter.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -74,10 +67,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1617" />
-    <option name="height" value="877" />
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1618" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -213,12 +206,12 @@
       <workItem from="1551102936279" duration="7113000" />
       <workItem from="1551132748694" duration="7175000" />
       <workItem from="1551220286585" duration="3707000" />
-      <workItem from="1551310007336" duration="1301000" />
+      <workItem from="1551310007336" duration="2869000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35292000" />
+    <option name="totallyTimeSpent" value="36860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -285,20 +278,17 @@
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/opencv_contrib_python-4.0.0.21.dist-info/RECORD" />
     <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/-66348636/cv2/__init__.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/ffmpeg/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Actions/convert/converter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="35" />
         </state>
       </provider>
     </entry>
