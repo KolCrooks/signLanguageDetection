@@ -8,6 +8,7 @@ from keras.utils import np_utils, generic_utils
 
 
 import os
+import sys
 
 import numpy as np
 import cv2
@@ -16,56 +17,69 @@ from sklearn.model_selection import train_test_split
 
 from keras import backend as K
 
+CURSOR_UP_ONE = '\033[F'
+ERASE_LINE = '\033[K'
+loading = ["|", "/","-","\\"]
+img_rows, img_cols, img_depth = 75, 75, 60
 
-def readdataset(videos,dir,retList):
+def replace_line(n_line):
+    sys.stdout.write("\r" + n_line)
+    sys.stdout.flush()
 
+def read_dataset(videos, directory, input_list):
+    vid_cnt = 0
+    print("Loading " + directory)
     for vid in videos:
-        vid = dir + vid
+        vid = directory + vid
         frames = []
         cap = cv2.VideoCapture(vid)
         while True:
             ret, frame = cap.read()
             if frame is None:
-                break;
+                break
             frame = cv2.resize(frame, (img_rows, img_cols), interpolation=cv2.INTER_AREA)
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             frames.append(gray)
-        print("frame count: " + str(len(frames)))
+
+        vid_cnt += 1
+        replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + str(len(frames)))
+
         cnt = 0
+        cnt2 = 0
         if len(frames) > img_depth:
             while len(frames) > img_depth:
                 del frames[cnt]
                 cnt += 1
+                cnt2 += 1
                 cnt %= len(frames)
+                replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
         else:
             while len(frames) < img_depth:
-                print(cnt)
-                print(len(frames))
-                frames.insert(cnt,frames[cnt])
+                frames.insert(cnt, frames[cnt])
                 cnt += 2
+                cnt2 += 1
                 cnt %= len(frames)
+                replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
 
-
+    replace_line("Loading Dataset (" + str(len(videos)) + "/" + str(len(videos)) + ")\t Done.")
     cap.release()
     cv2.destroyAllWindows()
     input = np.array(frames)
-    print(input.shape)
     ipt = np.rollaxis(np.rollaxis(input, 2, 0), 2, 0)  # to make data in image row, image column, image depth
-    print(ipt.shape)
-    retList.append(ipt)
+    input_list.append(ipt)
 
 
 K.set_image_dim_ordering('th')
 
 
-img_rows, img_cols, img_depth = 56, 56, 60
 
 # print(frameCount)
 # Test Video
 X_test = []
-vid = './Actions/'
-readdataset(['testAVI.avi'], vid, X_test);
-
+test_vid_dir = './Actions/'
+test_vid = 'Test_Eat.avi';
+read_dataset([test_vid], test_vid_dir, X_test);
+print("\n")
 X_test_array = np.array(X_test)
 num_samples2 = len(X_test_array)
 test_set = np.zeros((num_samples2, 1, img_rows, img_cols, img_depth))
@@ -73,45 +87,29 @@ test_set = np.zeros((num_samples2, 1, img_rows, img_cols, img_depth))
 
 # Where all data sets will be stored
 X_tr = []
+data = ['./Actions/Hello/','./Actions/Dog/','./Actions/Eat/']
 
 # handMoving Data set
-pathHM = './Actions/handMoving/'
-listingHM = os.listdir(pathHM)
-readdataset(listingHM, pathHM, X_tr);
+indexes = []
+for p in data:
+    listing = os.listdir(p)
+    indexes.append(len(listing))
+    read_dataset(listing, p, X_tr);
+    print("\n")
 
-# hands collide data set
-pathHC = './Actions/handsCollide/'
-listingHC = os.listdir(pathHC)
-readdataset(listingHC, pathHC, X_tr);
-
-# HandsUpAway data set
-pathHUA = './Actions/handsUpAway/'
-listingHUA = os.listdir(pathHUA)
-readdataset(listingHUA, pathHUA, X_tr);
-
-# handsUpDown data set
-pathHUP = './Actions/handsUpDown/'
-listingHUP = os.listdir(pathHUP)
-readdataset(listingHUP, pathHUP, X_tr);
-
-# open close data set
-pathOC = './Actions/openClose/'
-listingOC = os.listdir(pathOC)
-readdataset(listingOC, pathOC, X_tr);
 
 
 X_tr_array = np.array(X_tr)  # convert the frames read into array
 
 num_samples = len(X_tr_array)
-print(num_samples)
 
 # Assign Label to each class
 label = np.ones((num_samples,), dtype=int)
-label[0:len(listingHM)] = 0 #Hand Moving
-label[len(listingHM):len(listingHM)+len(listingHC)] = 1 #Hands colliding
-label[len(listingHM)+len(listingHC):len(listingHM)+len(listingHC)+len(listingHUA)] = 2 # Hands up away
-label[len(listingHM)+len(listingHC)+len(listingHUA):len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP)] = 3 # Hands up Down
-label[len(listingHM)+len(listingHC)+len(listingHUA)+len(listingHUP):] = 4  #Open Close
+label[0:indexes[0]] = 0                         #Hello
+label[indexes[0]:sum(indexes[0:1])] = 1         #Dog
+label[sum(indexes[0:1]):sum(indexes[0:2])] = 2  #Eat
+# label[sum(indexes[0:2]):sum(indexes[0:3])] = 3 # Hands up Down
+# label[sum(indexes[0:3]):] = 4  #Open Close
 
 train_data = [X_tr_array, label]
 
@@ -175,7 +173,7 @@ model.compile(loss='categorical_crossentropy', optimizer='RMSprop')
 
 # Split the data
 
-X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=2)
+X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.5, random_state=5)
 
 # Train the model
 opt = SGD(lr=0.001)
@@ -189,8 +187,9 @@ score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size)
 print(score)
 
 y_prob = model.predict(test_set, batch_size=2)
-
+print(y_prob)
 y_classes = y_prob.argmax(axis=-1)
-
-print(y_classes)
+classes = ["Hello","Dog","Eat"]
+print("INPUT:", test_vid)
+print("OUTPUT:", classes[int(y_classes)], y_classes)
 
