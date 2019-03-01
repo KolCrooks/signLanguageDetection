@@ -1,10 +1,9 @@
-from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.layers.convolutional import Convolution3D, MaxPooling3D
 
-from keras.optimizers import SGD, RMSprop
-from keras.utils import np_utils, generic_utils
+from keras.optimizers import SGD
+from keras.utils import np_utils
 
 
 import os
@@ -16,11 +15,10 @@ import cv2
 from sklearn.model_selection import train_test_split
 
 from keras import backend as K
+from keras.callbacks import CSVLogger
 
-CURSOR_UP_ONE = '\033[F'
-ERASE_LINE = '\033[K'
 loading = ["|", "/","-","\\"]
-img_rows, img_cols, img_depth = 75, 75, 60
+img_rows, img_cols, img_depth = 50, 50, 60
 
 def replace_line(n_line):
     sys.stdout.write("\r" + n_line)
@@ -77,7 +75,7 @@ K.set_image_dim_ordering('th')
 # Test Video
 X_test = []
 test_vid_dir = './Actions/'
-test_vid = 'Test_Eat.avi';
+test_vid = 'Test_Dog.avi';
 read_dataset([test_vid], test_vid_dir, X_test);
 print("\n")
 X_test_array = np.array(X_test)
@@ -94,7 +92,7 @@ indexes = []
 for p in data:
     listing = os.listdir(p)
     indexes.append(len(listing))
-    read_dataset(listing, p, X_tr);
+    read_dataset(listing, p, X_tr)
     print("\n")
 
 
@@ -173,23 +171,26 @@ model.compile(loss='categorical_crossentropy', optimizer='RMSprop')
 
 # Split the data
 
-X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.5, random_state=5)
+X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=2)
 
 # Train the model
 opt = SGD(lr=0.001)
 
+
 model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['acc'])
+csv_logger = CSVLogger('log.csv', append=True, separator=';')
+
 hist = model.fit(X_train_new, y_train_new, validation_data=(X_val_new, y_val_new),
-                 batch_size=batch_size, epochs=nb_epoch, shuffle=True)
+                 batch_size=batch_size, epochs=nb_epoch, shuffle=True,callbacks=[csv_logger])
 
 # Test Mode
 score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size)
 print(score)
 
-y_prob = model.predict(test_set, batch_size=2)
+y_prob = model.predict(test_set, batch_size=100)
 print(y_prob)
 y_classes = y_prob.argmax(axis=-1)
-classes = ["Hello","Dog","Eat"]
+classes = ["Hello", "Dog", "Eat"]
 print("INPUT:", test_vid)
 print("OUTPUT:", classes[int(y_classes)], y_classes)
 
