@@ -1,24 +1,23 @@
-from keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.layers.convolutional import Convolution3D, MaxPooling3D
-
-from keras.optimizers import SGD
-from keras.utils import np_utils
-
-
 import os
 import sys
 
-import numpy as np
 import cv2
-
-from sklearn.model_selection import train_test_split
-
+import numpy as np
 from keras import backend as K
 from keras.callbacks import CSVLogger
+from keras.layers.convolutional import Convolution3D, MaxPooling3D
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.models import Sequential
+from keras.optimizers import SGD
+from keras.utils import np_utils
+from sklearn.model_selection import train_test_split
+import threading
 
 loading = ["|", "/","-","\\"]
 img_rows, img_cols, img_depth = 50, 50, 60
+
+lock = threading.Lock()
+printLock = threading.Lock()
 
 def replace_line(n_line):
     sys.stdout.write("\r" + n_line)
@@ -26,7 +25,6 @@ def replace_line(n_line):
 
 def read_dataset(videos, directory, input_list):
     vid_cnt = 0
-    print("Loading " + directory)
     for vid in videos:
         vid = directory + vid
         frames = []
@@ -40,7 +38,12 @@ def read_dataset(videos, directory, input_list):
             frames.append(gray)
 
         vid_cnt += 1
-        replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + str(len(frames)))
+        printLock.acquire()
+        try:
+            sys.stdout.write("\r Loading " + directory + " (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + str(len(frames)))
+            sys.stdout.flush()
+        finally:
+            printLock.release()
 
         cnt = 0
         cnt2 = 0
@@ -50,21 +53,36 @@ def read_dataset(videos, directory, input_list):
                 cnt += 1
                 cnt2 += 1
                 cnt %= len(frames)
-                replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
+                printLock.acquire()
+                try:
+                    sys.stdout.write("\r Loading " + directory + " (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
+                    sys.stdout.flush()
+                finally:
+                    printLock.release()
         else:
             while len(frames) < img_depth:
                 frames.insert(cnt, frames[cnt])
                 cnt += 2
                 cnt2 += 1
                 cnt %= len(frames)
-                replace_line("Loading Dataset (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
-
-    replace_line("Loading Dataset (" + str(len(videos)) + "/" + str(len(videos)) + ")\t Done.")
+                printLock.acquire()
+                try:
+                    sys.stdout.write("\r Loading " + directory + " (" + str(vid_cnt) + "/" + str(len(videos)) + ") " + loading[cnt2%len(loading)])
+                    sys.stdout.flush()
+                finally:
+                    printLock.release()
+    print("")
+    print("Loading " + directory + " (" + str(len(videos)) + "/" + str(len(videos)) + ")\t Done.")
+    print("")
     cap.release()
     cv2.destroyAllWindows()
     input = np.array(frames)
     ipt = np.rollaxis(np.rollaxis(input, 2, 0), 2, 0)  # to make data in image row, image column, image depth
-    input_list.append(ipt)
+    lock.acquire()
+    try:
+        input_list.append(ipt)
+    finally:
+        lock.release()
 
 
 K.set_image_dim_ordering('th')
@@ -77,7 +95,7 @@ X_test = []
 test_vid_dir = './Actions/'
 test_vid = 'Test_Dog.avi';
 read_dataset([test_vid], test_vid_dir, X_test);
-print("\n")
+
 X_test_array = np.array(X_test)
 num_samples2 = len(X_test_array)
 test_set = np.zeros((num_samples2, 1, img_rows, img_cols, img_depth))
@@ -89,11 +107,21 @@ data = ['./Actions/Hello/','./Actions/Dog/','./Actions/Eat/']
 
 # handMoving Data set
 indexes = []
+threads = []
 for p in data:
     listing = os.listdir(p)
     indexes.append(len(listing))
-    read_dataset(listing, p, X_tr)
-    print("\n")
+    try:
+        t = threading.Thread(target=read_dataset, args=(listing, p, X_tr))
+        t.start()
+        threads.append(t)
+    except:
+        print("Error in starting threads")
+        exit(-1);
+
+for t in threads:
+    t.join()
+
 
 
 
