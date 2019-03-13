@@ -3,6 +3,7 @@
         <link rel="stylesheet" href="../lib/photon/css/photon.min.css">
         <link rel="stylesheet" href="style.css">
         <script>window.$ = window.jQuery = require('jquery');</script>
+        <script src="../lib/utils.js"></script>
         <script src="../js/renderer/main.js"></script>
     </header>
     <body>
@@ -10,7 +11,7 @@
         <div class="window">
             <div class="window-content">
                 <video id="video" style="width: 50vw; height: auto"></video>
-                <!-- <canvas id="output" style="width: 25vw; height: auto"></canvas> -->
+                 <canvas id="output" style="width: 25vw; height: auto"></canvas>
                 <div class="form-group">
                     <select class="form-control" id="cameraSelect" style="position: absolute; top:50%; width:30%; padding: 3px"></select>
                     <input type="number" id="min" value="2"></input>

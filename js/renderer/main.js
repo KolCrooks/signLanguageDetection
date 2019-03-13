@@ -2,20 +2,24 @@ let electron = require("electron").remote;
 let cameraWorker = require("../js/renderer/cameraWorker");
 let networkHelper = require("../js/renderer/networkRenderer")
 let cv = require('../lib/opencv')
+let utils = new Utils('')
 let recorder = require('../js/renderer/recorder')
+let handTraack = require('handtrackjs')
 $ = window.$;
 
 
+// if(electron.getCurrentWindow().is)
+	// electron.getCurrentWindow().toggleDevTools();
 
-electron.getCurrentWindow().toggleDevTools();
-
-var src;
-var dst;
-var dst2;
-var cap;
-var canvasFrame;
-var canvas2;
-
+let src;
+let dst;
+let dst2;
+let cap;
+let canvasFrame;
+let canvas2;
+let handClassifiers = [];
+let classifierFiles = ["aGest.xml", "fist.xml", "closed_frontal_palm.xml"];
+let detections = [];
 
 let init = async function(){
 	await updateDevices();
@@ -31,25 +35,29 @@ let init = async function(){
 	cameraWorker.renderImage().then((video)=>{
 		setTimeout(()=>{
 			(()=>{
-				// canvasFrame = document.getElementById("output");
+				canvasFrame = document.getElementById("output");
 
 
-				// video.width = video.videoWidth;
-				// video.height = video.videoHeight;
+				video.width = video.videoWidth;
+				video.height = video.videoHeight;
 
-				// canvasFrame.width = video.videoWidth;
-				// canvasFrame.height = video.videoHeight;
-				// $(canvasFrame).css("width","25vw");
-				// $(canvasFrame).css("height","auto");
+				canvasFrame.width = video.videoWidth;
+				canvasFrame.height = video.videoHeight;
+				$(canvasFrame).css("width","25vw");
+				$(canvasFrame).css("height","auto");
 				
-				// src = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC4);
-				// dst = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC1);
-				// cap = new cv.VideoCapture(video);
+				src = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC4);
+				dst = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC1);
+				cap = new cv.VideoCapture(video);
 				recorder.init(video);
-				$('#record').click(recorder.toggle)
-				$("#loadingDIV").fadeOut(1000);
-				// dst2 = dst.clone();
-				setTimeout(processVideo, 0);
+				$('#record').click(recorder.toggle);
+				handTrack.load().then(model => {
+					// detect objects in the image.
+					console.log("handtrack loaded")
+					$("#loadingDIV").fadeOut(1000);
+					setTimeout(()=>processVideo(model,video), 0);
+				});
+
 			})();
 	},10000);
 
@@ -60,7 +68,7 @@ let init = async function(){
 };
 
 
-var updateDevices = async ()=> {
+let updateDevices = async ()=> {
 	console.log("updating devices");
 	let devices = await cameraWorker.detectCameras();
 	devices.forEach(element => {
@@ -72,33 +80,15 @@ var updateDevices = async ()=> {
 };
 
 const FPS = 30;
-function processVideo() {
-	let begin = Date.now();
-	// cap.read(src);
-	// cv.imshow("output", src);
-	// src.convertTo(dst, -1, parseFloat(document.getElementById("min").value) || 0.1, parseFloat(document.getElementById("max").value) || 1);
-	// // cv.cvtColor(dst, dst2, cv.COLOR_RGBA2GRAY);
-	// cv.Canny(dst, dst2, 30, 60, 3, false);
-	// let contours = new cv.MatVector();
-	// let hierarchy = new cv.Mat();
-	// let temp = dst2.clone()
-	// console.log("1")
-	
-	// cv.findContours(dst2, contours, hierarchy, cv.RETR_LIST, cv.CHAIN_APPROX_SIMPLE);
-	// cv.filterContours()
-	// draw contours
-	// cv.drawContours(temp, contours, -1, new cv.Scalar(255,255,255), 1, cv.LINE_8, hierarchy, 100);
-	// console.log("3")
 
-	// contours.delete();
-	// hierarchy.delete();
-	// cv.imshow("output", dst);
-	// cv.imshow("output2", dst2);
-	// temp.delete();
+function processVideo(model,video) {
+	let beginning = Date.now();
+	model.detect(video).then(predictions => {
+		console.log('Predictions: ', predictions);
 
-    // schedule next one.
-    let delay = 1000/FPS - (Date.now() - begin);
-    setTimeout(processVideo, delay);
+		let delay = 1000/FPS - (Date.now() - beginning);
+		setTimeout(()=>processVideo(model,video), delay);
+	});
 }
 // schedule first one.
 
@@ -106,4 +96,3 @@ $(document).ready(()=> {
 	init();
 });
 
-global.networkHelper = networkHelper;
