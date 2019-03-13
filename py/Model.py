@@ -47,7 +47,12 @@ class ModelTrainer:
         batch_size = train_settings.batch_size
         epoch_cnt = train_settings.epoch_cnt
         indexes = train_settings.indexes
+        temp = []
+        for ar in x_tr_array:
+            for t in ar:
+                temp.append(t)
 
+        x_tr_array = np.array(temp)
         num_samples = len(x_tr_array)
 
         # Assign Label to each class
@@ -63,7 +68,8 @@ class ModelTrainer:
         (X_train, y_train) = (train_data[0], train_data[1])
         print('X_Train shape:', X_train.shape)
 
-        train_set = np.zeros((num_samples, 1, train_settings.img_size[0], train_settings.img_size[1], train_settings.img_size[2]))
+        train_set = np.zeros((num_samples, 1, train_settings.img_size[0], train_settings.img_size[1],
+                              train_settings.img_size[2]))
         for h in range(num_samples):
             train_set[h][0][:][:][:] = X_train[h, :, :, :]
 
@@ -77,8 +83,7 @@ class ModelTrainer:
 
         # Split the data
 
-        X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2,
-                                                                          random_state=2)
+        X_train_new, X_val_new, y_train_new, y_val_new = train_test_split(train_set, Y_train, test_size=0.2, random_state=0)
 
         # Train the model
         opt = SGD(lr=0.001)
