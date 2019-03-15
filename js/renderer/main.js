@@ -4,7 +4,7 @@ let networkHelper = require("../js/renderer/networkRenderer")
 let cv = require('../lib/opencv')
 let utils = new Utils('')
 let recorder = require('../js/renderer/recorder')
-let handTraack = require('handtrackjs')
+
 $ = window.$;
 
 
@@ -51,12 +51,8 @@ let init = async function(){
 				cap = new cv.VideoCapture(video);
 				recorder.init(video);
 				$('#record').click(recorder.toggle);
-				handTrack.load().then(model => {
-					// detect objects in the image.
-					console.log("handtrack loaded")
-					$("#loadingDIV").fadeOut(1000);
-					setTimeout(()=>processVideo(model,video), 0);
-				});
+				$("#loadingDIV").fadeOut(1000);
+				setTimeout(()=>processVideo(model,video), 0);
 
 			})();
 	},10000);
@@ -83,12 +79,8 @@ const FPS = 30;
 
 function processVideo(model,video) {
 	let beginning = Date.now();
-	model.detect(video).then(predictions => {
-		console.log('Predictions: ', predictions);
-
-		let delay = 1000/FPS - (Date.now() - beginning);
-		setTimeout(()=>processVideo(model,video), delay);
-	});
+	let delay = 1000/FPS - (Date.now() - beginning);
+	setTimeout(()=>processVideo(model,video), delay);
 }
 // schedule first one.
 

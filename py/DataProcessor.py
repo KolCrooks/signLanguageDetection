@@ -46,7 +46,7 @@ class DataProc:
             for frame in frame_clones:
                 (thresholded, segmented) = self.segment(frame)
                 frames.append(thresholded)
-
+                cv2.imshow("f",frame)
             vid_loaded.append(frames)
 
         print("")
@@ -102,7 +102,7 @@ class DataProc:
         threads = []
         for p in data:
             listing = os.listdir(p)
-            indexes.append(len(listing)*self.img_depth)
+            indexes.append(len(listing))
             try:
                 t = threading.Thread(target=self.read_dataset, args=(listing, p, X_tr))
                 t.start()

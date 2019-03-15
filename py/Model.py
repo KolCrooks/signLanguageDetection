@@ -3,11 +3,12 @@ from keras import backend as K
 from keras.layers.convolutional import Convolution3D, MaxPooling3D
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.optimizers import SGD
-from keras.models import Sequential
+from keras.models import Sequential, model_from_json
 from keras.callbacks import CSVLogger
 from keras.utils import np_utils
 from sklearn.model_selection import train_test_split
 import numpy as np
+
 
 
 class ModelTrainer:
@@ -99,6 +100,23 @@ class ModelTrainer:
         print(score)
 
         return hist
+
+    def save_model(self, model, location):
+        model_json = model.to_json()
+        with open(f"{location}/model.json", "w") as json_file:
+            json_file.write(model_json)
+        # serialize weights to HDF5
+        model.save_weights(f"{location}/model.h5")
+        print("Saved model to disk")
+
+    def load_from_json(self, location):
+        json_file = open(f"{location}/model.json", 'r')
+        loaded_model_json = json_file.read()
+        json_file.close()
+        loaded_model = model_from_json(loaded_model_json)
+        # load weights into new model
+        loaded_model.load_weights(f"{location}/model.h5")
+        return loaded_model
 
     def __init__(self):
         K.set_image_dim_ordering('th')
