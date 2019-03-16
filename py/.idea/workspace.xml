@@ -2,48 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b956b6a-70b6-4dfb-8e7e-948c9bc8cf92" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/Test_Dog.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Actions/tests/Test_Dog.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/Test_Eat.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Actions/tests/Test_Eat.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/Test_Hello.avi" beforeDir="false" afterPath="$PROJECT_DIR$/Actions/tests/Test_Hello.avi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Dog-1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Dog-2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Dog-3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Dog-4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Dog-5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Eat-1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Eat-2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Eat-3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Eat-4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Eat-5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Food-1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Food-2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Food-3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Food-4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Food-5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Hello-1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Hello-2.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Hello-3.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Hello-4.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/Hello-5.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/dog-10.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/dog-6.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/dog-7.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/dog-8.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/dog-9.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/eat-10.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/eat-6.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/eat-7.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/eat-8.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/eat-9.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/hello-10.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/hello-6.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/hello-8.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Actions/convert/hello-9.MOV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataProcessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataProcessor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.csv" beforeDir="false" afterPath="$PROJECT_DIR$/log.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/db.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/db.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/App.config" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/App.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/PythonHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/UDPServer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/.signature.p7s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/Newtonsoft.Json.12.0.1.nupkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net20/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net20/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net20/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net35/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net35/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net35/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net40/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net40/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net40/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net45/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net45/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/net45/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.0/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.0/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.3/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.3/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard1.3/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard2.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard2.0/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/netstandard2.0/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/packages/Newtonsoft.Json.12.0.1/lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,16 +59,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/py$app.coverage" NAME="app Coverage Results" MODIFIED="1552510660260" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py$app.coverage" NAME="main_train Coverage Results" MODIFIED="1552565569979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3DCnn$app.coverage" NAME="app Coverage Results" MODIFIED="1551120425643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py$main_server.coverage" NAME="main_server Coverage Results" MODIFIED="1552670246561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py$main_train.coverage" NAME="main_train Coverage Results" MODIFIED="1552590901196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py$main_test.coverage" NAME="main_test Coverage Results" MODIFIED="1552656442273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+            <state relative-caret-position="238">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -70,10 +80,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+            <state relative-caret-position="10">
+              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -81,11 +103,32 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main_server.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-234">
-              <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+            <state relative-caret-position="323">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -98,15 +141,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>30</find>
-      <find>print</find>
       <find>X_val_new</find>
       <find>patch_size</find>
       <find>test_vid</find>
@@ -135,6 +176,8 @@
       <find>img_size</find>
       <find>split</find>
       <find>test_sets</find>
+      <find>patch</find>
+      <find>patc</find>
     </findStrings>
     <replaceStrings>
       <replace>.</replace>
@@ -152,15 +195,19 @@
         <option value="$PROJECT_DIR$/DataProcressor_ynb.ipynb" />
         <option value="$PROJECT_DIR$/Model_ynb.ipynb" />
         <option value="$PROJECT_DIR$/app_ynb.ipynb" />
-        <option value="$PROJECT_DIR$/DataProcessor.py" />
-        <option value="$PROJECT_DIR$/Model.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/DataProcessor.py" />
+        <option value="$PROJECT_DIR$/main_train.py" />
+        <option value="$PROJECT_DIR$/Model.py" />
+        <option value="$PROJECT_DIR$/Settings.py" />
+        <option value="$PROJECT_DIR$/main_test.py" />
+        <option value="$PROJECT_DIR$/main_server.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="-555" />
+    <option name="y" value="90" />
     <option name="width" value="1620" />
     <option name="height" value="880" />
   </component>
@@ -172,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,23 +238,37 @@
               <item name="Actions" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="py" type="b2602c69:ProjectViewProjectNode" />
+              <item name="py" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_server.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kolcr\Desktop\signLanguageDetection\py\model\v1.0" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kolcr\Desktop\signLanguageDetection\py\Actions\tests" />
+      <recent name="C:\Users\kolcr\Desktop\signLanguageDetection\py\Actions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -221,7 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.main_server">
     <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="3DCnn" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -266,7 +328,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration name="main_server" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="3DCnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\kolcr\PycharmProjects\3DCnn\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="3DCnn" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\kolcr\PycharmProjects\3DCnn\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main_train" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="3DCnn" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -279,7 +382,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,7 +392,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.app" />
+      <item itemvalue="Python.main_train" />
+      <item itemvalue="Python.main_test" />
+      <item itemvalue="Python.main_server" />
       <item itemvalue="Python.__init__" />
     </list>
     <recent_temporary>
@@ -324,12 +429,15 @@
       <workItem from="1551896356024" duration="6613000" />
       <workItem from="1552056504433" duration="629000" />
       <workItem from="1552257073316" duration="1116000" />
-      <workItem from="1552321802966" duration="25056000" />
+      <workItem from="1552321802966" duration="30098000" />
+      <workItem from="1552561889806" duration="3384000" />
+      <workItem from="1552565758671" duration="7010000" />
+      <workItem from="1552654321576" duration="9014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91440000" />
+    <option name="totallyTimeSpent" value="115890000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -342,15 +450,38 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15637584" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37252125" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.40934843" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44475922" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5056657" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298122" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.50141644" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3512748" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.1875" visible="true" weight="0.3738255" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" sideWeight="0.8125" side_tool="true" visible="true" weight="0.3738255" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16040269" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18271954" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.7776204" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -359,14 +490,14 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.30028328" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.6713881" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.9249292" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info active="true" anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" side_tool="true" visible="true" weight="0.31543624" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.9428076" visible="true" weight="0.3738255" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" sideWeight="0.05840708" side_tool="true" visible="true" weight="0.3738255" />
       <window_info anchor="right" id="Database" order="5" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -419,27 +550,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model_ynb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcressor_ynb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_ynb.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Model_ynb.ipynb" />
+    <entry file="file://$PROJECT_DIR$/DataProcressor_ynb.ipynb" />
+    <entry file="file://$PROJECT_DIR$/app_ynb.ipynb" />
     <entry file="file://$USER_HOME$/PycharmProjects/3DCnn/venv/Lib/site-packages/numpy/core/_methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -454,32 +567,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessor.py">
+    <entry file="file://$PROJECT_DIR$/model/model.json" />
+    <entry file="file://$PROJECT_DIR$/main_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="104" column="54" selection-start-line="104" selection-start-column="54" selection-end-line="104" selection-end-column="54" />
+        <state relative-caret-position="238">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234">
-          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        <state relative-caret-position="323">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/DataProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
+        <state relative-caret-position="10">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
