@@ -1,15 +1,27 @@
+<<<<<<< HEAD
 ﻿using System.Reflection;
+=======
+using System.Reflection;
+>>>>>>> c597c4d27b7215d9191853772800f7006b657eb8
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+<<<<<<< HEAD
 [assembly: AssemblyTitle("server")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("server")]
+=======
+[assembly: AssemblyTitle("Server")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("Server")]
+>>>>>>> c597c4d27b7215d9191853772800f7006b657eb8
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +32,11 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
+<<<<<<< HEAD
 [assembly: Guid("8ebc59f7-9306-408c-91d3-81816cbe0753")]
+=======
+[assembly: Guid("7eefc879-80ac-4d75-820b-9937fc862849")]
+>>>>>>> c597c4d27b7215d9191853772800f7006b657eb8
 
 // Version information for an assembly consists of the following four values:
 //
