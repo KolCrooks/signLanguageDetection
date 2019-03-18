@@ -56,6 +56,7 @@ namespace Backend
             TFManager tf = new TFManager();
             Dictionary<string, session> sessions = new Dictionary<string, session>();
             PreProc preProc = new PreProc(size);
+
             while (true)
             {
                 IPEndPoint remoteEP = new IPEndPoint(IPAddress.Any, port);
@@ -65,29 +66,27 @@ namespace Backend
                 string result = System.Text.Encoding.UTF8.GetString(data);
 
                 packet p = JsonConvert.DeserializeObject<packet>(result);
-                string sessionIP = remoteEP.Address.ToString();
+                string sessionID = remoteEP.Address.ToString();
 
                 switch (p.state)
                 {
                     case START_POOL:
-                        if (sessions.ContainsKey(sessionIP))
-                            sessions.Remove(sessionIP);
-                        sessions.Add(sessionIP, new session(p, ref preProc));
+                        if (sessions.ContainsKey(sessionID))
+                            sessions.Remove(sessionID);
+                        sessions.Add(sessionID, new session(p, ref preProc));
                         break;
                     case POOLING:
-                        sessions[sessionIP].addFrame(p.frame, ref preProc);
+                        sessions[sessionID].addFrame(p.frame, ref preProc);
                         break;
                     case END_POOL:
-                        int[][,] processed = preProc.ProcessStack(sessions[sessionIP].frames.ToArray(), sessions[sessionIP].bg);
+                        int[][,] processed = preProc.ProcessStack(sessions[sessionID].frames.ToArray(), sessions[sessionID].bg);
                         int[][][][][] send = new int[1][][][][];
                         foreach(int[,] i in processed)
-                        {       
                             send[0][0].Append<int[][]>(i.ToJaggedArray());
 
-                        }
                         TFTensor tensor = new TFTensor(send);
                         tf.execute(tensor, udpServer);
-                        sessions.Remove(sessionIP);
+                        sessions.Remove(sessionID);
                         break;
                 }
 

@@ -27,8 +27,6 @@ namespace Backend
             Cv2.Resize(mIn, mOut, resizeDims, interpolation: InterpolationFlags.Area);
             Cv2.CvtColor(mOut, mOut, ColorConversionCodes.BGR2GRAY);
             run_avg(mOut, ref bg);
-            //TODO CORRECT DEPTH
-            //TODO THRESHOLD
             mOut.GetArray(resizeDims.Width, resizeDims.Height, output);
             return output;
         }
