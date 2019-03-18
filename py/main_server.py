@@ -2,14 +2,11 @@ from DataProcessor import DataProc
 from Model import ModelTrainer
 import numpy as np
 import Settings
-<<<<<<< HEAD
 import struct
 import time
 import socket
 import sys
 import _winapi as win32pipe
-=======
->>>>>>> c597c4d27b7215d9191853772800f7006b657eb8
 
 
 class Main:
@@ -20,7 +17,6 @@ class Main:
         model_load = ModelTrainer()
         self.model = model_load.load_from_json("./model")
         self.data_process = DataProc(Settings)
-<<<<<<< HEAD
         # Create a UDS socket
 
 
@@ -63,14 +59,5 @@ class Main:
             # print('Read:', s)
 
             time.sleep(10)
-=======
-
-        while True:
-            self.listen()
-
-    def listen(self):
-
->>>>>>> c597c4d27b7215d9191853772800f7006b657eb8
-
 
 Main()

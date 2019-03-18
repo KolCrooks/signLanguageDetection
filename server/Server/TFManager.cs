@@ -4,36 +4,39 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using TensorFlow;
 
-namespace server
+namespace Backend
 {
-    class TFManager : IDisposable
+    class TFManager
     {
-        TFGraph graph;
-        TFSession session;
+        byte[] model;
         public TFManager(string model = @"C:\Users\kolcr\Desktop\signLanguageDetection\py\model\v1.0\model.pb")
         {
-            graph = new TFGraph();
-            graph.Import(File.ReadAllBytes(model));
-            session = new TFSession(graph);
+            this.model = File.ReadAllBytes(model);
         }
 
-        public void Dispose()
+        public void execute(TFTensor input, UdpClient udpServer)
         {
-            graph.Dispose();
-            session.Dispose();
+            Thread t = new Thread(()=>run(input, udpServer, model));
+            t.Start();
         }
-
-        public async Task<TFTensor> execute(TFTensor input)
+        private void run(TFTensor input, UdpClient udpServer, byte[] model)
         {
-            var runner = session.GetRunner();
-            runner.AddInput(graph["input"][0], input);
-            runner.Fetch(graph["output"][0]);
+            using (TFGraph graph = new TFGraph())
+            {
+                graph.Import(model);
+                TFSession session = new TFSession(graph);
 
-            TFTensor output = runner.Run()[0];
-            return output;
+                var runner = session.GetRunner();
+                runner.AddInput(graph["input"][0], input);
+                runner.Fetch(graph["output"][0]);
+
+                TFTensor output = runner.Run()[0];
+                session.Dispose();
+            }
         }
     }
 }

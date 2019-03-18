@@ -1,0 +1,2 @@
+C:\Users\kolcr\Desktop\signLanguageDetection\server\server\obj\x86\Debug\server.csprojAssemblyReference.cache
+C:\Users\kolcr\Desktop\signLanguageDetection\server\server\obj\x86\Debug\server.csproj.CoreCompileInputs.cache

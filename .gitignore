@@ -1,2 +1,3 @@
 node_modules
 py/venv/lib/site-packages
+py/.idea/workspace.xml
