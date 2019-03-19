@@ -1,5 +1,6 @@
 let ipc = require('./networkRenderer');
 const { dialog, app } = require('electron').remote
+let cv = require('../lib/opencv')
 
 const options = {
   message: "File Path?",
@@ -18,9 +19,11 @@ let init = (canvas)=>{
     recorder = new MediaRecorder(stream);
 
     recorder.ondataavailable = function(e) {
+
         recordChunks.push(e.data);
         console.log(recordChunks.length)
-    }
+    };
+
     recorder.onerror = function(e){
         console.error(e);
     }
