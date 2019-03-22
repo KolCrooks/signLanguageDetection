@@ -79,6 +79,7 @@ namespace Backend
                         sessions[sessionID].addFrame(p.frame, ref preProc);
                         break;
                     case END_POOL:
+                        Console.WriteLine("POOL ENDED IN CLIENT " + sessionID);
                         int[][,] processed = preProc.ProcessStack(sessions[sessionID].frames.ToArray(), sessions[sessionID].bg);
                         int[][][][][] send = new int[1][][][][];
                         foreach(int[,] i in processed)

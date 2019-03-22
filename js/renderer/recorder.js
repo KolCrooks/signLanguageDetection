@@ -19,7 +19,6 @@ let init = (canvas)=>{
     recorder = new MediaRecorder(stream);
 
     recorder.ondataavailable = function(e) {
-
         recordChunks.push(e.data);
         console.log(recordChunks.length)
     };
