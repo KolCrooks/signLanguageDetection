@@ -12,6 +12,7 @@ let stream;
 let recorder;
 let recordChunks = [];
 let recording = false;
+
 let init = (canvas)=>{
 
     stream = canvas.captureStream();

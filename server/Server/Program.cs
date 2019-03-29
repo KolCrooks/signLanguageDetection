@@ -10,6 +10,7 @@ namespace Backend
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Starting Server!");
             Server s = new Server();
         }
     }

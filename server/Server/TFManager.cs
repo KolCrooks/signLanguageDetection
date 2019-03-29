@@ -12,48 +12,55 @@ using Newtonsoft.Json;
 
 namespace Backend
 {
-    class TFManager
+    class TFManager : IDisposable
     {
-        byte[] model;
+        private byte[] model;
+        private TFGraph graph;
+        private TFSession session;
         public TFManager(string model = @"C:\Users\kolcr\Desktop\signLanguageDetection\py\model\v1.0\model.pb")
         {
+            //Set up tensorflow Objects
             this.model = File.ReadAllBytes(model);
+            graph = new TFGraph();
+            graph.Import(this.model);
+            session = new TFSession(graph);
         }
 
-        public void execute(TFTensor input, UdpClient udpServer)
+        public void Dispose()
         {
-            Thread t = new Thread(()=>run(input, udpServer, model));
-            t.Start();
+            graph.Dispose();
+            session.Dispose();
         }
-        private void run(TFTensor input, UdpClient udpServer, byte[] model)
-        {
-            Thread.CurrentThread.Name = udpServer.ToString();
 
+        public void execute(TFTensor input, ref NetworkStream client)
+        {
+            //Start Timer
             var stopwatch = new Stopwatch();
-            using (TFGraph graph = new TFGraph())
-            {
-                graph.Import(model);
-                TFSession session = new TFSession(graph);
+            
 
-                var runner = session.GetRunner();
-                runner.AddInput(graph["input"][0], input);
-                runner.Fetch(graph["output"][0]);
+            //Run Graph with data
+            var runner = session.GetRunner();
+            runner.AddInput(graph["input"][0], input);
+            runner.Fetch(graph["output"][0]);
 
-                stopwatch.Stop();
+            TFTensor output = runner.Run()[0];
 
-                TFTensor output = runner.Run()[0];
-                session.Dispose();
-                string outString = "{data:[";
 
-                foreach (int i in ((int[][])output.GetValue(jagged: true))[0])
-                    outString += i + ",";
+            //Create packet with JSON format
+            string outString = "{data:[";
 
-                outString += "]}";
+            foreach (int i in ((int[][])output.GetValue(jagged: true))[0])
+                outString += i + ",";
 
-                byte[] outb = Encoding.ASCII.GetBytes(outString);
-                udpServer.SendAsync(outb, outb.Length);
+            outString += "]}";
 
-            }
+            byte[] outb = Encoding.ASCII.GetBytes(outString);
+
+            //Send Packet
+            client.Write(outb, 0, outb.Length);
+
+
+            //End Timer
             stopwatch.Stop();
             var elapsed_time = stopwatch.ElapsedMilliseconds;
             Console.WriteLine(Thread.CurrentThread.Name + ": Classified in " + elapsed_time + "ms");
