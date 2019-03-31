@@ -1,5 +1,5 @@
 let cv = require('opencv4nodejs');
-let imageProc = require('../js/imgProc');
+
 let VideoCapture = function(videoElement, canvasDummy){
     videoElement.addEventListener('timeupdate', capture, false);
 

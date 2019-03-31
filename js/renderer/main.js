@@ -2,8 +2,9 @@ let electron = require("electron").remote;
 let cameraWorker = require("../js/renderer/cameraWorker");
 let networkHelper = require("../js/renderer/networkRenderer");
 let recorder = require('../js/renderer/recorder');
-let videoCapture = require("../js/renderer/VideoCapture")
-
+let videoCapture = require("../js/renderer/VideoCapture");
+var Client = require("../js/renderer/client");
+var imageProc = require('../js/renderer/imgProc');
 
 $ = window.$;
 
@@ -30,7 +31,7 @@ let init = async function(){
 		recorder = new recorder(video);
 
 		$('#record').click(recorder.toggle);
-		$("#loadingDIV").fadeOut(1000);
+		$("#loadingDIV").fadeOut(750);
 
 	}).catch(e=>{console.error(e)})
 	

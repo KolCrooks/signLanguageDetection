@@ -2,109 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b956b6a-70b6-4dfb-8e7e-948c9bc8cf92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../js/renderer/VideoCapture.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../js/renderer/client.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../js/renderer/imgProc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../1550955216342.webm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clips/1550955339547.webm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../clips/hands.webm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/main/networkMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/main/networkMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/renderer/cameraWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/cameraWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/renderer/VideoCapture.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/VideoCapture.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../js/renderer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/renderer/networkRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/networkRenderer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../js/renderer/recorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/recorder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/.bin/electron-rebuild" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/.bin/electron-rebuild" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/license" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/spinners.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/spinners.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/contributing.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/contributing.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/prebuild-shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/prebuild-shim.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/browser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/node.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy-sync/copy-sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy-sync/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy/copy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/empty/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/file.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink-paths.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink-type.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/fs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/jsonfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/output-json-sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/output-json.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/mkdirs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/win32.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/move-sync/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/move/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/output/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/path-exists/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/remove/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/remove/rimraf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/util/buffer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/util/utimes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/ambient.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/ambient.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/cli.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/cli.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/electron-locater.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/electron-locater.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/prebuild-shim.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/prebuild-shim.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/read-package-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/read-package-json.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/rebuild.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/rebuild.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/electron-locater.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/electron-locater.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/fixture/native-app1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/fixture/native-app1/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/read-package-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/read-package-json.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/rebuild.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/rebuild.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/ora/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/ora/license" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/license" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/ora/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/ora/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Session.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/TFManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/TFManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/bin/Debug/server.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/bin/Debug/server.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/bin/Debug/server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/bin/Debug/server.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/server.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/server.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/server.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/server.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/server.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/server.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,14 +51,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1963">
-              <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
+            <state relative-caret-position="1020">
+              <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -449,12 +365,12 @@
       <workItem from="1553175290495" duration="596000" />
       <workItem from="1553266360166" duration="2147000" />
       <workItem from="1553534545288" duration="47000" />
-      <workItem from="1553992187691" duration="665000" />
+      <workItem from="1553992187691" duration="2849000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112846000" />
+    <option name="totallyTimeSpent" value="115030000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,7 +383,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17248322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -626,20 +541,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DataProcessor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataProcessor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1963">
-          <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
