@@ -1,62 +1,36 @@
 let electron = require("electron").remote;
 let cameraWorker = require("../js/renderer/cameraWorker");
-let networkHelper = require("../js/renderer/networkRenderer")
-let cv = require('../lib/opencv')
-let utils = new Utils('')
-let recorder = require('../js/renderer/recorder')
+let networkHelper = require("../js/renderer/networkRenderer");
+let recorder = require('../js/renderer/recorder');
+let videoCapture = require("../js/renderer/VideoCapture")
+
 
 $ = window.$;
 
 
-// if(electron.getCurrentWindow().is)
-	// electron.getCurrentWindow().toggleDevTools();
-
-let src;
-let dst;
-let dst2;
-let cap;
-let canvasFrame;
-let canvas2;
-let handClassifiers = [];
-let classifierFiles = ["aGest.xml", "fist.xml", "closed_frontal_palm.xml"];
-let detections = [];
-
 let init = async function(){
 	await updateDevices();
 
-	$("#cameraSelect").click(updateDevices);
-	$("#cameraSelect").change(()=>{
-		console.log("cameraChange",$("#cameraSelect").val());
-		cameraWorker.setCamera($("#cameraSelect").val());
+	let cameraSelect = $("#cameraSelect");
+	cameraSelect.click(updateDevices);
+	cameraSelect.change(()=>{
+		console.log("cameraChange",cameraSelect.val());
+		cameraWorker.setCamera(cameraSelect.val());
 	});
 
-	console.log("cameraChange",$("#cameraSelect").val());
-	cameraWorker.setCamera($("#cameraSelect").val());
-	cameraWorker.renderImage().then((video)=>{
-		setTimeout(()=>{
-			(()=>{
-				canvasFrame = document.getElementById("output");
+	console.log("cameraChange",cameraSelect.val());
+	cameraWorker.setCamera(cameraSelect.val());
+	cameraWorker.attachCamera().then((video)=>{
 
+		video.width = video.videoWidth;
+		video.height = video.videoHeight;
+		let dummyCanvas = document.getElementById('dummy');
 
-				video.width = video.videoWidth;
-				video.height = video.videoHeight;
+		videoCapture = new videoCapture(video, dummyCanvas);
+		recorder = new recorder(video);
 
-				canvasFrame.width = video.videoWidth;
-				canvasFrame.height = video.videoHeight;
-				$(canvasFrame).css("width","25vw");
-				$(canvasFrame).css("height","auto");
-				
-				src = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC4);
-				dst = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC1);
-				cap = new cv.VideoCapture(video);
-				recorder.init(video);
-				$('#record').click(recorder.toggle);
-				$("#loadingDIV").fadeOut(1000);
-				setTimeout(()=>processVideo(model,video), 0);
-
-			})();
-	},10000);
-
+		$('#record').click(recorder.toggle);
+		$("#loadingDIV").fadeOut(1000);
 
 	}).catch(e=>{console.error(e)})
 	
@@ -75,16 +49,7 @@ let updateDevices = async ()=> {
 	});
 };
 
-const FPS = 30;
-
-function processVideo(model,video) {
-	let beginning = Date.now();
-	let delay = 1000/FPS - (Date.now() - beginning);
-	setTimeout(()=>processVideo(model,video), delay);
-}
-// schedule first one.
-
 $(document).ready(()=> {
-	init();
+	init().then(()=>{console.log("Done Loading.")});
 });
 

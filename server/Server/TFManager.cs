@@ -54,7 +54,7 @@ namespace Backend
 
             outString += "]}";
 
-            byte[] outb = Encoding.ASCII.GetBytes(outString);
+            byte[] outb = Encoding.UTF8.GetBytes(outString);
 
             //Send Packet
             client.Write(outb, 0, outb.Length);

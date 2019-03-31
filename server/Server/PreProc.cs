@@ -16,34 +16,42 @@ namespace Backend
         /**
          * Proccesses a stack of frames. Purpose is to process the frame pools recieved from the server.
          */
-        public static int[][,] ProcessStack(int[][,] Frames, ref Mat bg, Size resizeDims)
+        public static int[][,] ProcessStack(String[] Frames, ref Mat bg, Size resizeDims)
         {
             //Correct the depth of the stack
             Frames = correctDepth(Frames, depth);
-
+            Mat[] mFrames = new Mat[depth];
             //Create Background for subtraction
-            foreach (int[,] i in Frames)
+            for(int i = 0; i < depth; i++)
             {
-                run_avg(new Mat(resizeDims.Width, resizeDims.Height, MatType.CV_8UC4, i.Cast<int>().Select(c => c).ToArray()), ref bg);
+                byte[] image = Convert.FromBase64String(Frames[i]);
+                mFrames[i] = Cv2.ImDecode(image, ImreadModes.Grayscale);
+                run_avg(mFrames[i], ref bg);
             }
             //Threshold image and subract background
-            for (int i = 0; i < Frames.Length; i++)
+            for (int i = 0; i < depth; i++)
             {
-                Frames[i] = segment(Frames[i], bg, resizeDims);
+                mFrames[i] = segment(mFrames[i], bg, resizeDims);
             }
 
+            int[][,] procedFrames = new int[depth][,];
 
-            return Frames;
+            for(int i = 0; i < depth; i++)
+            {
+                procedFrames[i] = new int[resizeDims.Width, resizeDims.Height];
+                mFrames[i].GetArray(mFrames[i].Width, mFrames[i].Height, procedFrames[i]);
+            }
+            return procedFrames;
         }
 
         /**
          * Resizes The array to the correct depth
          */
-        private static int[][,] correctDepth(int[][,] frames, int depth)
+        private static string[] correctDepth(string[] frames, int depth)
         {
             int index = 0;
 
-            var tempFrames = frames.Cast<int[,]>().ToList();
+            var tempFrames = frames.ToList();
             while (tempFrames.Count != depth)
             {
                 if (tempFrames.Count > depth)
@@ -72,17 +80,15 @@ namespace Backend
             //compute weighted average, accumulate it and update the background
             Cv2.AccumulateWeighted(image, bg, aWeight, new Mat());
         }
-        private static int[,] segment(int[,] frame, Mat bg, Size resizeDims, int threshold = 25)
+        private static Mat segment(Mat frame, Mat bg, Size resizeDims, int threshold = 25)
         {
-            Mat mIn = new Mat(resizeDims.Width, resizeDims.Height, MatType.CV_8UC4, frame.Cast<int>().Select(c => c).ToArray());
             Mat diff = new Mat();
-            Cv2.Absdiff(bg, mIn, diff);
+            Cv2.Absdiff(bg, frame, diff);
 
             Mat thresholded = new Mat();
             Cv2.Threshold(diff, thresholded, threshold, 255, ThresholdTypes.Binary);
-            int[,] output = new int[resizeDims.Width, resizeDims.Height];
-            thresholded.GetArray(resizeDims.Width, resizeDims.Height, output);
-            return output;
+
+            return thresholded;
         }
 
     }

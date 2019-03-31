@@ -65,7 +65,7 @@ namespace server
 
             packetPool.AddRange(bytes.SubArray(1, bytes.Length));
             //Convert JSON data to a packet object
-            String data = System.Text.Encoding.ASCII.GetString(packetPool.ToArray(), 0, i);
+            String data = System.Text.Encoding.UTF8.GetString(packetPool.ToArray(), 0, i);
             
             packet p = JsonConvert.DeserializeObject<packet>(data);
             
@@ -100,16 +100,10 @@ namespace server
                 packet p = result.Item2;
                 
                 Mat bg = new Mat();
-                int[][,] frames = new int[p.frames.Length][,];
 
-                //Convert int[][][] to int[][,]
-                foreach(int[][] i in p.frames)
-                {
-                    frames.Append(i.ToRectangularArray());
-                }
 
                 //Process Frames
-                int[][,] procStack = PreProc.ProcessStack(frames,ref bg, size);
+                int[][,] procStack = PreProc.ProcessStack(p.frames,ref bg, size);
 
                 //Convert 3D array to 5D so that we have the propper model input
                 int[][][][][] tfInput = new int[1][][][][];

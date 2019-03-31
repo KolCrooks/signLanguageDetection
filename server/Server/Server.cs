@@ -15,7 +15,7 @@ namespace Backend
     class packet
     {
         public int[] size;
-        public int[][][] frames;
+        public string[] frames;
     }
 
     class Server
