@@ -2,18 +2,109 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b956b6a-70b6-4dfb-8e7e-948c9bc8cf92" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../js/renderer/VideoCapture.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../js/renderer/client.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../js/renderer/imgProc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1550955216342.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clips/1550955339547.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../clips/hands.webm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/main/networkMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/main/networkMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/renderer/cameraWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/cameraWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/renderer/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/renderer/networkRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/networkRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/renderer/recorder.js" beforeDir="false" afterPath="$PROJECT_DIR$/../js/renderer/recorder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/.bin/electron-rebuild" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/.bin/electron-rebuild" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/license" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/cli-spinners/spinners.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/cli-spinners/spinners.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/contributing.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/contributing.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/cli.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/electron-locater.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/prebuild-shim.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/prebuild-shim.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/read-package-json.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/lib/src/rebuild.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/debug/src/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy-sync/copy-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy-sync/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy/copy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/copy/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/empty/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/file.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/link.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink-paths.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink-type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/ensure/symlink.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/fs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/jsonfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/output-json-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/json/output-json.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/mkdirs-sync.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/mkdirs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/mkdirs/win32.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/move-sync/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/move/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/output/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/path-exists/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/remove/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/remove/rimraf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/util/buffer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/lib/util/utimes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/node_modules/fs-extra/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/ambient.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/ambient.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/cli.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/cli.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/electron-locater.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/electron-locater.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/prebuild-shim.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/prebuild-shim.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/read-package-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/read-package-json.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/rebuild.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/src/rebuild.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/electron-locater.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/electron-locater.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/fixture/native-app1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/fixture/native-app1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/read-package-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/read-package-json.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/rebuild.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/test/rebuild.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/electron-rebuild/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/electron-rebuild/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ora/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ora/license" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/license" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ora/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/ora/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/ora/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../node_modules/y18n/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../node_modules/y18n/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/../server/.vs/Server/v15/Server/sqlite3/storage.ide-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/PreProc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/PreProc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/obj/Debug/Server.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/Session.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server/Server/TFManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../server/Server/TFManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../web/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,14 +116,14 @@
     <SUITE FILE_PATH="coverage/py$app.coverage" NAME="main_train Coverage Results" MODIFIED="1552565569979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/3DCnn$app.coverage" NAME="app Coverage Results" MODIFIED="1551120425643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py$main_train.coverage" NAME="main_train Coverage Results" MODIFIED="1552590901196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py$main_test.coverage" NAME="main_test Coverage Results" MODIFIED="1552607043983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py$main_test.coverage" NAME="main_test Coverage Results" MODIFIED="1553292983817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="238">
               <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -44,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
+            <state relative-caret-position="522">
               <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -56,8 +147,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DataProcessor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+            <state relative-caret-position="1963">
+              <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -66,18 +157,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="323">
               <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -169,6 +251,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,12 +285,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -363,11 +445,16 @@
       <workItem from="1552561889806" duration="3384000" />
       <workItem from="1552565758671" duration="7010000" />
       <workItem from="1552745293348" duration="2512000" />
+      <workItem from="1553018691006" duration="3000" />
+      <workItem from="1553175290495" duration="596000" />
+      <workItem from="1553266360166" duration="2147000" />
+      <workItem from="1553534545288" duration="47000" />
+      <workItem from="1553992187691" duration="665000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109388000" />
+    <option name="totallyTimeSpent" value="112846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,12 +469,12 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1624161" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17248322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40509915" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.601983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.7776204" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -396,13 +483,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3298122" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.30028328" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.14589235" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.9249292" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.9390935" visible="true" weight="0.3738255" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" sideWeight="0.060906515" side_tool="true" visible="true" weight="0.3738255" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.9320113" visible="true" weight="0.27248323" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="4" sideWeight="0.06798867" side_tool="true" visible="true" weight="0.27248323" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
     <layout-to-restore>
@@ -509,12 +596,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
+        <state relative-caret-position="323">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -526,30 +633,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataProcessor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="134" column="25" lean-forward="true" selection-start-line="134" selection-start-column="25" selection-end-line="134" selection-end-column="25" />
+        <state relative-caret-position="1963">
+          <caret line="133" column="10" selection-start-line="133" selection-start-column="10" selection-end-line="133" selection-end-column="10" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

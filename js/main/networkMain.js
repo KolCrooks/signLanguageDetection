@@ -9,4 +9,4 @@ ipcMain.on("SAVE_FILE", (event, path, buffer) => {
           event.sender.send("SAVED_FILE", path)
       }
   })
-})
+});

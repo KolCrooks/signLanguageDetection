@@ -10,16 +10,13 @@
         <div class="loading style-2" id="loadingDIV"><div class="loading-wheel"></div></div>
         <div class="window">
             <div class="window-content">
-                <video id="video" style="width: 50vw; height: auto"></video>
-                 <canvas id="output" style="width: 25vw; height: auto"></canvas>
+                <video id="video"></video>
                 <div class="form-group">
-                    <select class="form-control" id="cameraSelect" style="position: absolute; top:50%; width:30%; padding: 3px"></select>
-                    <input type="number" id="min" value="2"></input>
-                    <input type="number" id="max" value="-100"></input>
-                    <button id="record">record<button>
+                    <select class="form-control" id="cameraSelect"></select>
+                    <button id="record">record</button>
                 </div>
-
             </div>
           </div>
+        <canvas id="dummy" style="position: absolute; right: -1000px; display: none"></canvas>
     </body>
 </html>
