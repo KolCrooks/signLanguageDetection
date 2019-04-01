@@ -66,7 +66,6 @@ C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\System.Security.AccessControl.dll
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\System.Security.Principal.Windows.dll
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\System.ValueTuple.dll
-C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\TensorFlowSharp.dll
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\OpenCvSharp.pdb
 C:\Users\kolcr\Desktop\Programming\signLanguageDetection\server\server\bin\Debug\OpenCvSharp.xml

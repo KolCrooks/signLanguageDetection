@@ -73,7 +73,7 @@ namespace server
 
             packetPool.AddRange(bytes.Slice(1, bytes.Length));
             //Convert JSON data to a packet object
-            String data = System.Text.Encoding.UTF8.GetString(packetPool.ToArray(), 0, packetPool.Count);
+            string data = System.Text.Encoding.UTF8.GetString(packetPool.ToArray(), 0, packetPool.Count);
             
             packet p = JsonConvert.DeserializeObject<packet>(data);
             
@@ -96,9 +96,6 @@ namespace server
             //Thread loop that listens for all data coming from the tcp client
             while (running)
             {
-                //Check if client is still connected
-                if (!client.Connected)
-                    break;
 
                 Tuple<bool, packet> result = null;
                 //Check the stream to see if there are any pools to test

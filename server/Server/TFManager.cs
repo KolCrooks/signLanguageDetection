@@ -40,10 +40,9 @@ namespace Backend
 
             //Run Graph with data
             var runner = session.GetRunner();
-            var enums = graph.GetEnumerator();
             runner.AddInput(graph["conv3d_1_input"][0], input);
             runner.Fetch(graph["activation_1/Softmax"][0]);
-
+            
             TFTensor output = runner.Run()[0];
 
 
