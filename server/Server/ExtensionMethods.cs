@@ -42,11 +42,23 @@ namespace server
             }
             return output;
         }
-        internal static T[] SubArray<T>(this T[] data, int index, int length)
+
+        public static T[] Slice<T>(this T[] source, int start, int end)
         {
-            T[] result = new T[length];
-            Array.Copy(data, index, result, 0, length);
-            return result;
+            // Handles negative ends.
+            if (end < 0)
+            {
+                end = source.Length + end;
+            }
+            int len = end - start;
+
+            // Return new array.
+            T[] res = new T[len];
+            for (int i = 0; i < len; i++)
+            {
+                res[i] = source[i + start];
+            }
+            return res;
         }
     }
 }

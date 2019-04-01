@@ -5,7 +5,7 @@ let net = require('net');
  * @param ip The IP of the server
  * @param port port of the server
  */
-let client = function(ip = "localhost", port = 9999){
+let client = function(ip = "localhost", port = 31419){
     let options = {
         host: ip,
         port: port
@@ -17,7 +17,7 @@ let client = function(ip = "localhost", port = 9999){
         console.log('Connection remote address : ' + client.remoteAddress + ":" + client.remotePort);
     });
 
-    client.setTimeout(1000);
+    client.setTimeout(0);
     client.setEncoding('utf8');
 
     // When receive server send back data.
@@ -35,7 +35,7 @@ let client = function(ip = "localhost", port = 9999){
     });
 
     client.on('error', function (err) {
-        console.error(JSON.stringify(err));
+        console.error(err);
     });
 
     /**
@@ -43,19 +43,31 @@ let client = function(ip = "localhost", port = 9999){
      * @param frames: int[][][] of frames
      */
     this.sendFrames = function(frames){
-
+        console.log(`Sending ${frames.length} frames`);
         let obj = {
             frames: frames,
             size: [frames[0].length, frames[0][0].length],
         };
 
-        let bytes = JSON.stringify(obj).toUTF8Array();
-        //MAX CHUNK SIZE IS 1400 BYTES (1 less byte to keep room for the state byte)
-        let chunks = chunkArray(bytes, 1399);
-        for (let i = 0; i < chunks.length - 1; i++) {
-            client.write(new Buffer([0x0].concat(chunks[i])));
+        let s = JSON.stringify(obj);
+        let utf8 = unescape(encodeURIComponent(s));
+        let arr = [];
+        for (let i = 0; i < utf8.length; i++) {
+            arr.push(utf8.charCodeAt(i));
         }
-        client.write(new Buffer([0x01].concat(chunks[chunks.length - 1])))
+        console.log(s.length);
+
+        //MAX CHUNK SIZE IS 1400 BYTES (1 less byte to keep room for the state byte)
+        let chunks = chunkArray(arr, 1399);
+        console.log(`Sending ${chunks.length} chunks`)
+        for (let i = 0; i < chunks.length - 1; i++) {
+            let tempBuf = new Buffer([0x0].concat(chunks[i]));
+            client.write(tempBuf);
+        }
+        let tempBuf = new Buffer([0x01].concat(chunks[chunks.length - 1]));
+        console.log('Writing Buffer', tempBuf);
+
+        client.write(tempBuf)
     };
 
     /**
@@ -73,38 +85,6 @@ let client = function(ip = "localhost", port = 9999){
 
         return results;
     }
-
-    String.prototype.toUTF8Array = ()=>{
-        let str = this;
-        let utf8 = [];
-        for (let i=0; i < str.length; i++) {
-            let charcode = str.charCodeAt(i);
-            if (charcode < 0x80) utf8.push(charcode);
-            else if (charcode < 0x800) {
-                utf8.push(0xc0 | (charcode >> 6),
-                    0x80 | (charcode & 0x3f));
-            }
-            else if (charcode < 0xd800 || charcode >= 0xe000) {
-                utf8.push(0xe0 | (charcode >> 12),
-                    0x80 | ((charcode>>6) & 0x3f),
-                    0x80 | (charcode & 0x3f));
-            }
-            // surrogate pair
-            else {
-                i++;
-                // UTF-16 encodes 0x10000-0x10FFFF by
-                // subtracting 0x10000 and splitting the
-                // 20 bits of 0x0-0xFFFFF into two halves
-                charcode = 0x10000 + (((charcode & 0x3ff)<<10)
-                    | (str.charCodeAt(i) & 0x3ff));
-                utf8.push(0xf0 | (charcode >>18),
-                    0x80 | ((charcode>>12) & 0x3f),
-                    0x80 | ((charcode>>6) & 0x3f),
-                    0x80 | (charcode & 0x3f));
-            }
-        }
-        return utf8;
-    };
 
     Array.prototype.insert = function ( index, item ) {
         this.splice( index, 0, item );

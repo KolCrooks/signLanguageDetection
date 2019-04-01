@@ -1,10 +1,11 @@
 import keras
+import tensorflow
 from keras import backend as K
 from keras.layers.convolutional import Convolution3D, MaxPooling3D
 from keras.layers.core import Dense, Dropout, Activation, Flatten
 from keras.optimizers import SGD
 from keras.models import Sequential, model_from_json
-from keras.callbacks import CSVLogger
+from keras.callbacks import CSVLogger, TensorBoard
 from keras.utils import np_utils
 from sklearn.model_selection import train_test_split
 import numpy as np
@@ -92,8 +93,10 @@ class ModelTrainer:
         model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['acc'])
         csv_logger = CSVLogger('log.csv', append=True, separator=';')
 
+
         hist = model.fit(X_train_new, y_train_new, validation_data=(X_val_new, y_val_new),
-                         batch_size=batch_size, epochs=epoch_cnt, shuffle=True, callbacks=[csv_logger])
+                         batch_size=batch_size, epochs=epoch_cnt, shuffle=True,
+                         callbacks=[csv_logger,keras.callbacks.TensorBoard()])
 
         # Test Mode
         score = model.evaluate(X_val_new, y_val_new, batch_size=batch_size)

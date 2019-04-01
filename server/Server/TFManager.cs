@@ -17,7 +17,7 @@ namespace Backend
         private byte[] model;
         private TFGraph graph;
         private TFSession session;
-        public TFManager(string model = @"C:\Users\kolcr\Desktop\signLanguageDetection\py\model\v1.0\model.pb")
+        public TFManager(string model = @"C:\Users\kolcr\Desktop\Programming\signLanguageDetection\py\model\v1.0\model.pb")
         {
             //Set up tensorflow Objects
             this.model = File.ReadAllBytes(model);
@@ -40,9 +40,9 @@ namespace Backend
 
             //Run Graph with data
             var runner = session.GetRunner();
-            runner.AddInput(graph["input"][0], input);
-            runner.Fetch(graph["output"][0]);
-
+            runner.AddInput(graph["conv3d_1_input"][0], input);
+            runner.Fetch(graph["activation_1/Softmax"][0]);
+            
             TFTensor output = runner.Run()[0];
 
 

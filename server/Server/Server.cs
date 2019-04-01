@@ -14,8 +14,8 @@ namespace Backend
 {
     class packet
     {
-        public int[] size;
-        public string[] frames;
+        public List<string> frames { get; set; }
+        public List<int> size { get; set; }
     }
 
     class Server
@@ -41,6 +41,7 @@ namespace Backend
             {
                 TcpClient cl = server.AcceptTcpClient();
                 string ip = ((IPEndPoint)cl.Client.RemoteEndPoint).Address.ToString();
+                sessions.Remove(ip);
 
                 sessions.Add(ip,new Session(cl));
                 Console.WriteLine("IP:{0}   - Connected", ip);

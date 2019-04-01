@@ -1,12 +1,11 @@
 let cv = require('opencv4nodejs');
-let client = require("../js/renderer/client");
-client = new client();
+let client = new window.Client.client();
 
 let pool = [];
 
 let procAndPool = function(Mat){
     let frame = proc(Mat);
-    pool.append(cv.imencode('.jpg', frame).toString('base64'));
+    pool.push(cv.imencode('.jpg', frame).toString('base64'));
 };
 
 let proc = function(Mat){
@@ -22,5 +21,6 @@ let sendPool = function(){
 module.exports = {
     procAndPool,
     proc,
-    sendPool
+    sendPool,
+    pool
 };
